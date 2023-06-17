@@ -1,0 +1,46 @@
+import random
+def game(computer, you):
+   if computer == you:
+      print("Its a tie!")
+
+   elif computer == "r":
+       if you == "p":
+          print("You Won")
+       elif you == "s":
+           print("You Lost")
+
+   elif computer == "p":
+      if you == "s":
+         print("You Won")
+      elif you == "r":
+         print("You Lost")
+
+   elif computer == "s":
+      if you == "r":
+         print("You Won")
+      elif you == "p":
+         print("You Lost")
+
+print("Welcome to Rock,Paper,Scissors online version! You are playing against the computer.")
+you = input("Choose your weapon: Rock(r), Paper(p) , Scissor(s)")
+
+randomnum = random.randint(1,3)
+if randomnum == 1:
+   computer = "r"
+elif randomnum == 2:
+   computer = "p"
+elif randomnum == 3:
+   computer = "s"
+
+game(computer, you)
+
+print("You chose {}".format(you))
+print("Computer chose {}".format(computer))
+
+
+
+
+
+
+
+
