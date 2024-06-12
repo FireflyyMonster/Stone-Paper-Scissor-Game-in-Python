@@ -1,5 +1,7 @@
 import random
 print("Welcome to Rock,Paper,Scissors online version! You are playing against the computer.")
+
+your_marks = [] 
 n = 0
 while n<5:
    def game(computer, you):
@@ -9,18 +11,24 @@ while n<5:
       elif computer == "r":
          if you == "p":
             print("You Won")
+            your_marks.append(1)
+
          elif you == "s":
             print("You Lost")
 
       elif computer == "p":
          if you == "s":
             print("You Won")
+            your_marks.append(1)
+
          elif you == "r":
             print("You Lost")
 
       elif computer == "s":
          if you == "r":
             print("You Won")
+            your_marks.append(1)
+
          elif you == "p":
             print("You Lost")
 
@@ -40,6 +48,7 @@ while n<5:
    print("Computer chose {}".format(computer))
    n = n+1
 
+print("Your total score is ", sum(your_marks))
 print("Your 5 chances have ended, Thanks for Playing!")
 
 
